@@ -261,3 +261,16 @@ To evolve this repository into a richer protocol component, consider:
 
 This repository is intended as a clean and concise starting point for experimenting with Leo, Aleo, and web3 soundness patterns inspired by Aztec, Zama, and general zk ecosystems.
 
+## Example
+
+```sh
+# Example of running the main transition:
+python app.zk_sonic.leo --old_commitment <old_commitment> --new_commitment <new_commitment> --fee 10
+```
+### Expected output:
+{
+    "old_commitment": "<old_commitment>",
+    "new_commitment": "<new_commitment>",
+    "fee": 10
+}
+
