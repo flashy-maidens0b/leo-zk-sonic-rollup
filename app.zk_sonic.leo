@@ -1,4 +1,12 @@
 // File: app.zk_sonic.leo
+// This function creates a Pedersen-style commitment using the value and blinding factor of the note
+function note_commitment(note: Note) -> field {
+    // The inputs are the note's value and its associated blinding factor
+    let inputs: [field; 2] = [note.value as field, note.blinding];
+    
+    // Return the Pedersen commitment based on the hash of the inputs
+    return std::hash::pedersen::hash(inputs);
+}
 
 program zk_sonic.aleo {
 
