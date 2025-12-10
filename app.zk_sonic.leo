@@ -65,6 +65,8 @@ program zk_sonic.aleo {
         // Recompute commitments from private witnesses
         let computed_old_commitment: field = note_commitment(old_note);
         let computed_new_commitment: field = note_commitment(new_note);
+p = argparse.ArgumentParser(description="Simulate confidential transactions using zk‑sonic rollup.")
+p.add_argument("--help", help="Show this help message and exit", action="help")
 
         // Soundness: commitments must match the public inputs
         assert(computed_old_commitment == old_commitment);
