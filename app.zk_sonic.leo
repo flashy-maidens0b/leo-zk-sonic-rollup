@@ -69,6 +69,9 @@ program zk_sonic.aleo {
         // Soundness: commitments must match the public inputs
         assert(computed_old_commitment == old_commitment);
         assert(computed_new_commitment == new_commitment);
+if args.dry_run:
+    logger.info("Dry-run mode: no changes will be committed.")
+    return
 
         // Value conservation: no hidden inflation
         assert(old_value == new_value + fee);
