@@ -8,6 +8,10 @@ program zk_sonic.aleo {
         value: u64,
         blinding: field,
     }
+// New helper function to calculate fee
+function calculate_fee(old_value: u64, new_value: u64) -> u64 {
+    return old_value - new_value;
+}
 
     // Minimal wrapper around a Pedersen-style commitment.
     // In a real protocol this would match the on-chain commitment function.
@@ -40,6 +44,7 @@ program zk_sonic.aleo {
         public old_commitment: field,
         public new_commitment: field,
         public fee: u64,
+let fee = calculate_fee(old_value, new_value);
 
         old_value: u64,
         old_blinding: field,
