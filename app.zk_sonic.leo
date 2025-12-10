@@ -1,4 +1,10 @@
 // File: app.zk_sonic.leo
+import logging
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+assert(computed_old_commitment == old_commitment), logger.error("Old commitment mismatch!")
 
 program zk_sonic.aleo {
 
