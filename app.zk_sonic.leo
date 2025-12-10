@@ -8,6 +8,21 @@ program zk_sonic.aleo {
         value: u64,
         blinding: field,
     }
+// Refactor: split logic into smaller functions for readability
+
+// Rebuilds a Note from the value and blinding factor
+function rebuild_note(value: u64, blinding: field) -> Note {
+    return Note { value: value, blinding: blinding };
+}
+
+// Validates that the note commitments match the provided values
+function validate_commitments(old_note: Note, new_note: Note, old_commitment: field, new_commitment: field) {
+    let computed_old_commitment = note_commitment(old_note);
+    let computed_new_commitment = note_commitment(new_note);
+
+    assert(computed_old_commitment == old_commitment);
+    assert(computed_new_commitment == new_commitment);
+}
 
     // Minimal wrapper around a Pedersen-style commitment.
     // In a real protocol this would match the on-chain commitment function.
