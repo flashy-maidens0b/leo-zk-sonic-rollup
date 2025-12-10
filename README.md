@@ -1,4 +1,25 @@
 # leo-zk-sonic-rollup
+## Summary
+
+A good README helps developers understand what the project does, why it exists, and how to get started. Currently the README is terse on purpose and background. Adding an overview + quick start will improve onboarding.  
+
+## Proposed Changes
+
+- Add at top of README:  
+  - Project purpose / high-level summary (“What”)  
+  - Why this rollup / checker matters (“Why”)  
+  - Basic dependencies / requirements  
+- Add a “Getting Started / Quick Start” section:  
+  1. Example of compiling/building (if relevant)  
+  2. Running a minimal circuit or zk‑proof (or a “hello world”)  
+  3. Verifying or checking with the rollup, sample commands  
+- Optionally add a small example circuit or placeholder to help newcomers try it out quickly.  
+
+## Motivation
+
+- Makes the repo more approachable and informative.  
+- Lowers the barrier of entry for new users or contributors.  
+- Encourages adoption and experimentation.  
 
 Minimal Leo program that models a confidential transfer step, inspired by web3 zk-rollup and privacy projects such as Aztec, Zama, and soundness-focused proof systems.
 
