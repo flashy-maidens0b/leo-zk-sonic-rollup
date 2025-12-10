@@ -8,6 +8,9 @@ program zk_sonic.aleo {
         value: u64,
         blinding: field,
     }
+// Additional sanity checks for `fee`
+assert(fee >= 0u64);
+assert(fee <= old_value);
 
     // Minimal wrapper around a Pedersen-style commitment.
     // In a real protocol this would match the on-chain commitment function.
